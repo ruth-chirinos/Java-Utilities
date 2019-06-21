@@ -1,0 +1,100 @@
+Tags,Item Chain Platform API paths,ViZix API paths,Method,Notes / Swagger Description
+ICP Retail,/iot/retail/cycleCounts/expectedItems,/reportExecution/{id},POST,Expected Items
+ICP Retail,/iot/retail/cycleCounts/readItems,/reportExecution/{id},POST,Cycle Count
+ICP Retail,/iot/retail/discrepancy,/reportExecution/{id},POST,
+ICP Retail,/iot/retail/incomingItems,/reportExecution/{id},POST,
+ICP Retail,/iot/retail/inventory,/reportExecution/261 (Kohl's),POST,Inventory 1.5 (Kohl's)
+ICP Retail,/iot/retail/onHandProducts,/reportExecution/264 (Kohl's),POST,SOH 1.5 (Kohl's)
+ICP Retail,/iot/retail/products,/reportExecution/265 (Kohl's),POST,Products 1.5 (Kohl's)
+ICP Retail,/iot/retail/toReplenishProducts,/reportExecution/{id},POST,Replenishment
+ICP Retail,/iot/retail/sellableItems,/reportExecution/{id},POST,
+ICP Retail,/iot/retail/soldItems,/reportExecution/{id},POST,
+ICP Retail,/iot/retail/UPCs,/reportExecution/{id},POST,
+ICP Retail,/iot/retail/items,/reportExecution/265 (Kohl's),POST,Items
+ICP Retail,/iot/retail/stores,/tenantGroups,GET,Stores.  Extends Tenant Groups
+ICP Supply Chain,/iot/supply/receivedItems,/reportExecution/{id},POST,Receiving
+ICP Supply Chain,/iot/supply/shippedItems,/reportExecution/{id},POST,Shipping
+Item Chain Ledger,/iot/chain/items,/reportExecution/{id},POST,Item Ledger Things.  Items extends /iot/platform/things
+Item Chain Ledger,/iot/chain/parties,/smartContractParty,GET,extends Group
+Item Chain Ledger,/iot/chain/parties/{id},/smartContractParty/{id},GET,
+Item Chain Ledger,/iot/chain/provenance,/reportExecution/{id},POST,Provenance
+Item Chain Ledger,/iot/chain/trackAndTrace,/reportExecution/{id},POST,Track and Trace
+Item Chain Workflows,/iot/chain/flowInstances,/blockchain/smartContracts,GET,
+Item Chain Workflows,/iot/chain/flowInstances/{id},/blockchain/smartContracts/{id},GET,
+Item Chain Workflows,/iot/chain/flowInstances/{id}/action,/blockchain/smartContracts/executeCommand,PATCH,refine Path
+Item Chain Workflows,/iot/chain/flows,/smartContractDefinition,GET,extends CEP rules
+Item Chain Workflows,/iot/chain/flows/{id},/smartContractDefinition/{id},GET,
+Item Ledger CEP,/iot/chain/CEPRules,/edgeboxRule,GET,Extending /iot/platform/CEPRules
+Item Ledger CEP,/iot/chain/CEPRules/{CEPRuleID}/schedules,/scheduledRule,GET,Extending /iot/platform/CEPRules
+Item Ledger CEP,/iot/chain/rulesets,/edgebox,GET,Extending /iot/platform/CEPRules
+Platform Apps,/iot/platform/apps,/appTab,GET,/iot/application/
+Platform Apps,/iot/platform/apps/{appID}/favorites,/favorite,GET,Do we need to include?
+Platform Apps,/iot/platform/apps/{appID}/menus,/appTab/{id}/associate/{menuID},PATCH,
+Platform Apps,/iot/platform/apps/{appID}/menus/{menuID}/reports,/appTab/{id}/associate/{menuID}/{reportID},PATCH,
+Platform Apps,/iot/platform/apps/{appID}/recents,/recent,GET,Composer needed
+Platform Blockchain,/iot/platform/flowInstances,/workflows/process,GET,
+Platform Blockchain,/iot/platform/flowInstances/{id},/workflows/process/{id},GET,
+Platform Blockchain,/iot/platform/flowInstances/{id}/action,/workflows/process/executeCommand,PATCH,
+Platform Blockchain,/iot/platform/flows,/workflowDefinition,GET,
+Platform Blockchain,/iot/platform/flows/{id},/workflowDefinition/{id},GET,
+Platform Blockchain,/iot/platform/ledger,/api/v1/applications/{applicationId}/ledgerImplementations,GET,pending
+Platform CEP,/iot/platform/CEPRules,/edgeboxRule,GET,Native Stream Apps & JSRules (Azure Functions)
+Platform CEP,/iot/platform/CEPRules/{CEPRuleID}/schedules,/scheduledRule,GET,
+Platform CEP,/iot/platform/rulesets,/edgebox,GET,
+Platform Connectors,/iot/platform/connectors,/connection,GET,External Connections.  For 1st party/2nd Party Business Events
+Platform Connectors,/iot/platform/connectorsType,/connection/Type,GET,External Connections.  For 1st party/2nd Party Business Events
+Platform Edge,/iot/edge/reader/bluetoothEvents,,GET,
+Platform Edge,/iot/edge/reader/rfidALEEvents,,GET,IoT sensor streams
+Platform Edge,/iot/edge/reader/rfidStarflexEvents,,GET,
+Platform Edge,/iot/edge/reader/videoEvents,,GET,
+Platform Edge,/iot/edge/stream/H264 (not necessarily rest),,GET,"Media streams (video, image, audio)"
+Platform Edge,/iot/edge/stream/imageFrames,,GET,Data streams
+Platform Edge,/iot/edge/stream/videoONVIF (not necessarily rest),,GET,"Media streams (video, image, audio)"
+Platform Events,/iot/platform/events,/reportExecution/{id},POST,
+Platform GeoLocations,/iot/platform/indoorMaps,/localMap,GET,planograms ?
+Platform GeoLocations,/iot/platform/logicalReader,/logicalReader,GET,
+Platform GeoLocations,/iot/platform/zoneGroups,/zoneGroup,GET,
+Platform GeoLocations,/iot/platform/zones,/zone,GET,"Geo fences
+Locations"
+Platform GeoLocations,/iot/platform/zones/{zoneID}/points,/zonePoint,GET,
+Platform GeoLocations,/iot/platform/zones/{zoneID}/properties,/zoneProperty,GET,
+Platform GeoLocations,/iot/platform/zones/{zoneID}/schedules,/shift,GET,Geofence & Timefence
+Platform GeoLocations,/iot/platform/zoneTypes,/zoneType,GET,
+Platform Health,/iot/platform/monitoring,/healthAndStatus,GET,Do we need to expose?
+Platform Reports,/iot/platform/reportGroups,/folder,GET,Composer specific?
+Platform Reports,/iot/platform/reports,/reportDefintion,GET,
+Platform Reports,/iot/platform/reports/{reportID}:run,/reportExecution,POST,
+Platform Reports,/iot/platform/reports/{reportID}/notebooks,/notebook,GET,Extends Report Definition
+Platform Reports,/iot/platform/reports/{reportID}/rules,/reportRule,GET,Composer specific?
+Platform Reports,/iot/platform/reports/{reportID}/webActions,/actionConfiguration,GET,Web Actions
+Platform Reports,/iot/platform/reports/batchProcesses,,GET,
+Platform Tenants,/iot/platform/group/{groupID}/properties,/field,GET,Data Entries related?
+Platform Tenants,/iot/platform/groups,/group,GET,
+Platform Tenants,/iot/platform/groups/{groupID}/resources,/groupResources,GET,Group Configuration
+Platform Tenants,/iot/platform/groupTypes,/groupType,GET,
+Platform Tenants,/iot/platform/i18nLanguages,/i18n,GET,
+Platform Tenants,/iot/platform/resources,/resource,GET,
+Platform Tenants,/iot/platform/roles,/role,GET,Should we use something more specific like tenantRoles
+Platform Tenants,/iot/platform/roles/{roleID}/permissions,/role/{roleID}/permission,GET,
+Platform Tenants,/iot/platform/users,/user,GET,
+Platform Things,/iot/platform/standardThingTypes/{thingtypeID}/properties,/thingTypeFieldTemplate,GET,
+Platform Things,/iot/platform/standardThingTypes,/thingTypeTemplate,GET,
+Platform Things,/iot/platform/thing/{thingID}/associatedThings,,GET,
+Platform Things,/iot/platform/things,/things,GET,
+Platform Things,/iot/platform/things:async,/thingBridge/thing,GET,
+Platform Things,/iot/platform/things/{thingID}/files,/attachment,GET,
+Platform Things,/iot/platform/thingTypes,/thingType,GET,/thingClass ?
+Platform Things,/iot/platform/thingTypes/{thingTypeID}/associatedThingTypes,,GET,Associate Thing Type UDFs to a Thing Type
+Platform Things,/iot/platform/thingTypes/{thingTypeID}/propertyTypes,/dataType,GET,"should it be associated inside Things ?
+eventType"
+Platform Things,/iot/platform/reports/{reportID}/userActions,/dataEntry,GET,"/iot/platform/forms
+smart events "
+Platform Utility,"/iot/platform/utility/batchProcesses
+",/backgroundProcess,GET,Do we need to include?
+Platform Utility,/iot/platform/utility/export/{type}/{id},/fileManagement/export/{type}/{id},GET,Need to classify
+Platform Utility,/iot/platform/utility/import,/fileManagement/import,POST,Need to classify
+Platform Utility,/iot/platform/utility/license,/license,GET,Licenses?
+Platform Utility,/iot/platform/utility/parameters,/parameters,GET,Should be part of other resource
+Platform Utility,/iot/platform/utility/RFIDPrinter,/RFIDPrinter,GET,It does not Exists
+Platform Utility,/iot/platform/utility/secondLevelCache,/secondLevelCache,GET,
+Platform Utility,/iot/platform/utility/version,/version,GET,
